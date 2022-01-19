@@ -17,12 +17,12 @@ const getUrl = (pathname?: string): string =>
 describe("Feathers application tests (with jest)", () => {
   let server: Server;
 
-  beforeAll((done) => {
+  beforeAll(done => {
     server = app.listen(port);
     server.once("listening", () => done());
   });
 
-  afterAll((done) => {
+  afterAll(done => {
     server.close(done);
   });
 
