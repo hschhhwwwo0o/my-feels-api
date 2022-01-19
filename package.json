@@ -1,0 +1,76 @@
+{
+  "name": "my-feels-api",
+  "description": "RESTful API on FeathersJS with MongoDB database",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Saveliy Andronov",
+    "email": "ssandry.github@gmail.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^16.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run compile && npm run jest",
+    "lint": "eslint src/. test/. --config .eslintrc.json --ext .ts --fix",
+    "dev": "ts-node-dev --no-notify src/",
+    "start": "npm run compile && node lib/",
+    "jest": "jest --forceExit",
+    "compile": "shx rm -rf lib/ && tsc"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": []
+  },
+  "types": "lib/",
+  "dependencies": {
+    "@feathersjs/authentication": "^4.5.12",
+    "@feathersjs/authentication-local": "^4.5.12",
+    "@feathersjs/authentication-oauth": "^4.5.12",
+    "@feathersjs/configuration": "^4.5.12",
+    "@feathersjs/errors": "^4.5.12",
+    "@feathersjs/express": "^4.5.12",
+    "@feathersjs/feathers": "^4.5.12",
+    "@feathersjs/socketio": "^4.5.13",
+    "@feathersjs/transport-commons": "^4.5.12",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "feathers-mongoose": "^8.5.1",
+    "helmet": "^4.6.0",
+    "mongodb-core": "^3.2.7",
+    "mongoose": "^6.1.6",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/cors": "^2.8.12",
+    "@types/jest": "^27.0.3",
+    "@types/jsonwebtoken": "^8.5.7",
+    "@types/serve-favicon": "^2.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "axios": "^0.24.0",
+    "eslint": "^8.6.0",
+    "jest": "^27.4.5",
+    "shx": "^0.3.4",
+    "ts-jest": "^27.1.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  }
+}
