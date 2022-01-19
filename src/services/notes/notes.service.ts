@@ -1,4 +1,3 @@
-// Initializes the `notes` service on path `/notes`
 import { ServiceAddons } from "@feathersjs/feathers";
 import { Application } from "../../declarations";
 import { Notes } from "./notes.class";

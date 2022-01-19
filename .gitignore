@@ -2,9 +2,6 @@
 logs
 *.log
 
-# Config
-config
-
 # Runtime data
 pids
 *.pid
@@ -113,3 +110,4 @@ $RECYCLE.BIN/
 # Others
 lib/
 data/
+.env
