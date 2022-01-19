@@ -1,4 +1,4 @@
-import { HooksObject } from "@feathersjs/feathers";
+import { HookContext } from "@feathersjs/feathers";
 import * as authentication from "@feathersjs/authentication";
 
 const { authenticate } = authentication.hooks;
@@ -6,7 +6,19 @@ const { authenticate } = authentication.hooks;
 export default {
   before: {
     all: [authenticate("jwt")],
-    find: [],
+    find: [
+      async (ctx: HookContext) => {
+        const user: any = ctx.params.user;
+
+        const query = {
+          ...ctx.params.query,
+          authorID: String(user._id),
+        };
+
+        ctx.params.query = query;
+        return ctx;
+      },
+    ],
     get: [],
     create: [],
     update: [],
