@@ -108,6 +108,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # Others
-lib/
 data/
 .env
