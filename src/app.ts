@@ -20,6 +20,7 @@ import authentication from "./authentication";
 import mongoose from "./mongoose";
 
 const app: Application = express(feathers());
+
 export type HookContext<T = any> = {
   app: Application;
 } & FeathersHookContext<T>;
@@ -36,19 +37,14 @@ app.use(compress());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(app.get("public"), "favicon.ico")));
-
 app.use("/", express.static(app.get("public")));
 
 app.configure(express.rest());
 app.configure(socketio());
-
 app.configure(mongoose);
-
 app.configure(middleware);
 app.configure(authentication);
-
 app.configure(services);
-
 app.configure(channels);
 
 app.use(express.notFound());
