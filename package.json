@@ -1,8 +1,8 @@
 {
   "name": "my-feels-api",
   "description": "RESTful API on FeathersJS with MongoDB database",
-  "version": "0.0.0",
-  "homepage": "",
+  "version": "1.1.0",
+  "homepage": "https://github.com/ssandry/my-feels-api",
   "private": true,
   "main": "src",
   "keywords": [
