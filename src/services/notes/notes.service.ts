@@ -18,7 +18,7 @@ export default function (app: Application): void {
 
   app.use("/notes", new Notes(options, app));
 
-  const service = app.service("notes");
+  const service: Notes & ServiceAddons<any> = app.service("notes");
 
   service.hooks(hooks);
 }
