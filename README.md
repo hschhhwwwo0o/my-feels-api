@@ -1,6 +1,4 @@
-<img src="./md/header.png" />
-<img src="./md/name.png" />
-<img src="./md/preview.png" />
+<img src="./md/frame.png" />
 
 RESTful API on FeathersJS with MongoDB database
 
