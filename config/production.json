@@ -1,4 +1,4 @@
 {
-  "host": "my-feels-api-app.feathersjs.com",
+  "host": "https://my-feels-api.herokuapp.com/",
   "port": "PORT"
 }
