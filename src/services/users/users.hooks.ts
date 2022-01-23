@@ -14,7 +14,7 @@ export default {
       async (ctx: HookContext) => {
         const user: any = ctx.params.user;
 
-        if (user) {
+        if (user && user.email !== "my-feels@admin.com") {
           const ctxQuery = ctx.params.query ? ctx.params.query : {};
 
           const newQuery = user
