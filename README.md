@@ -1,4 +1,4 @@
-<img src="./md/frame.png" />
+![GitHub Dark](./md/frame.png#gh-light-mode-only)
 
 RESTful API on FeathersJS with MongoDB database
 
